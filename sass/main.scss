@@ -1,0 +1,180 @@
+@import "bourbon";
+
+/* GENERAL */
+body p {
+  line-height: 1.6em;
+}
+
+p a {
+  color: #186634;
+  padding-bottom: 2px;
+  border-bottom: 1px solid #186634;
+
+  &:hover, &:focus, &:active {
+    color: lighten(#186634, 10%);
+    text-decoration: none;
+    padding-bottom: 2px;
+    border-bottom: 1px solid lighten(#186634, 15%);
+  }
+
+  // &:visited {
+  //   color: lighten(#186634, 0%);
+  //   text-decoration: none;
+  //   padding-bottom: 2px;
+  //   border-bottom: none !important;
+  // }
+}
+
+.section {
+  margin-top: 3em;
+}
+
+.description {
+  margin-top: 1em;
+}
+
+.note {
+  margin-top: 1em;
+
+  p {
+    color: #999; 
+    
+    &:before {
+      content: '*';
+      margin-right: 5px;
+      vertical-align: middle;
+    }
+  }
+}
+
+.content-footer {
+  height: 0;
+}
+.content-footer .scroll-top {
+  padding: 20px;
+  margin-bottom: 38px;
+  height: auto;
+  @include transform(translateY(40px));
+}
+
+.product-bar {
+  background: #ffffff; /* Old browsers */
+  background: -moz-linear-gradient(left,  #ffffff 0%, #d8d8da 55%); /* FF3.6-15 */
+  background: -webkit-linear-gradient(left,  #ffffff 0%,#d8d8da 55%); /* Chrome10-25,Safari5.1-6 */
+  background: linear-gradient(to right,  #ffffff 0%,#d8d8da 55%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', endColorstr='#d8d8da',GradientType=1 ); /* IE6-9 */
+
+  border-top: 1px solid #bbb;
+  border-bottom: 1px solid #bbb;
+
+  .message {
+    margin: 30px;
+  }
+}
+
+#target-blog {
+  margin-top: 3em;
+}
+
+.product-bar:last-child {
+  margin-bottom: 0;
+}
+
+/* MENU TWEAKS */
+.menu-item a, .nav-item a {
+  @include transition(all 0.15s $ease-in-out-quad);
+}
+
+.menu-item a:hover {
+  margin-top: -4px;
+}
+
+#mc_embed_signup form {
+  clear:left;
+  font:14px Helvetica,Arial,sans-serif;
+  width:460px;
+  margin: 0 -150px;
+}
+
+/* SECTION :: OUR TEAM */
+
+.profile-box {
+  position: relative;
+  width: 219px;
+  height: 250px; 
+  background-color: white;
+  // background-image: url('../../dist/img/staff/johnthompson.jpg');
+  background-repeat: no-repeat;
+  background-size: cover;
+  @include filter(grayscale(100%));
+  @include transition(all 0.3s $ease-in-out-quad);
+
+  &.no-img {
+    background-image: url('../../dist/img/staff/generic-01.png');
+  }
+
+  &:hover {
+    @include filter(grayscale(0%));
+
+    .p-box-inner {
+      background: transparentize(black, 0.5);
+    }
+    
+    span {
+      opacity: 1;
+    }
+
+    .name {
+      @include transform(translateX(3px));
+    }
+
+    .jobtitle {
+      @include transform(translateX(9px));
+    }
+  }
+
+  .p-box-inner {
+    position: absolute;
+    width: 100%;
+    bottom: 0;
+    background: transparentize(black, 1);
+    overflow: hidden;
+    
+    @include transition(all 0.2s $ease-in-out-quad);
+  }
+
+  span {
+    opacity: 0.8;
+    color: white;
+    padding: 10px;
+    display: block;
+  }
+
+  .name {
+    font-family: "open-sans", sans-serif;
+    font-size: 0.9em;
+    font-weight: 900;
+    text-transform: uppercase;
+    padding-bottom: 3px;
+    letter-spacing: 0.75px;
+
+    @include transition(all 0.25s $ease-in-out-quad);
+  }
+
+  .jobtitle {
+    font-size: 0.9em;
+    font-style: italic;
+    font-weight: 100;
+    padding-top: 0;
+
+    @include transition(all 0.25s $ease-in-out-quad);
+  }
+}
+
+li.department {
+  margin-bottom: 10px;
+}
+
+li.department a {
+    font-size: 20px;
+}
