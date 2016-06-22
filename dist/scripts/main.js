@@ -396,8 +396,9 @@ $(function () {
           show: true,
           position: 'bottom'
         },
-        patterncolors: ['#1A6735', '#33CC69', '#1A6800','#1A6735','#1A6800']
+        patterncolors: ['#304131', '#39513b', '#4d6b4f', '#719974']
     });
+        // patterncolors: ['#1A6735', '#33CC69', '#1A6800','#1A6735','#1A6800']
 
     participatingPie1.loadCount('status', {
         aggregatefield: 'status'
@@ -410,8 +411,9 @@ $(function () {
           show: true,
           position: 'bottom'
         },
-        patterncolors: ['#1A6735', '#33CC69', '#1A6800','#1A6735','#1A6800']
+        patterncolors: ['#304131', '#39513b', '#4d6b4f', '#719974']
     });
+        // patterncolors: ['#1A6735', '#33CC69', '#1A6800','#1A6735','#1A6800']
 
     participatingPie2.loadCount('type', {
         aggregatefield: 'type'
