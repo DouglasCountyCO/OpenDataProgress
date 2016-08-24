@@ -86,7 +86,7 @@ $(function () {
     /////////////////////////////////////////////
     ////////////////  Blog   ////////////////////
     /////////////////////////////////////////////
-    $.jGFeed('http://www.douglas.co.us/category/open-data/feed/',
+    $.jGFeed('https://www.douglas.co.us/category/open-data/feed/',
     function (feeds) {
         if (!feeds) {
             return false;
@@ -107,7 +107,7 @@ $(function () {
         $('#target-blog').html( Mustache.render(template, feeds) );
     }, 10);
 
-    $.getJSON('https://data.douglas.co.us/api/catalog/v1?only=story', function(data) {
+    $.getJSON('https://data.douglas.co.us/api/catalog?only=story', function(data) {
         if (data.results) {
             var stories = data.results.map(function(r) {
                 return {

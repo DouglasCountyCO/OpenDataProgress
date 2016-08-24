@@ -26,7 +26,7 @@ var e=c.find(".active:last a"),f=a.Event("hide.bs.tab",{relatedTarget:b[0]}),g=a
       // Make sure url to get is defined
       if(url == null) return false;
       // Build Google Feed API URL
-      var gurl = "http://ajax.googleapis.com/ajax/services/feed/load?v=1.0&callback=?&q="+url;
+      var gurl = "https://ajax.googleapis.com/ajax/services/feed/load?v=1.0&callback=?&q="+url;
       if(num != null) gurl += "&num="+num;
       if(key != null) gurl += "&key="+key;
       // AJAX request the API
@@ -140,7 +140,7 @@ $(function () {
     /////////////////////////////////////////////
     ////////////////  Blog   ////////////////////
     /////////////////////////////////////////////
-    $.jGFeed('http://www.douglas.co.us/category/open-data/feed/',
+    $.jGFeed('https://www.douglas.co.us/category/open-data/feed/',
     function (feeds) {
         if (!feeds) {
             return false;
@@ -161,7 +161,7 @@ $(function () {
         $('#target-blog').html( Mustache.render(template, feeds) );
     }, 10);
 
-    $.getJSON('https://data.douglas.co.us/api/catalog/v1?only=story', function(data) {
+    $.getJSON('https://data.douglas.co.us/api/catalog?only=story', function(data) {
         if (data.results) {
             var stories = data.results.map(function(r) {
                 return {
