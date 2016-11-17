@@ -29,7 +29,7 @@ ol, ul {
 }
 
 .header {
-    background-image: url(../img/stripes.png), url(../img/doco2.jpg);
+    background-image: url(../img/stripes.png), url(../img/doco3.jpg);
     -webkit-background-size: 50px,cover;
     -moz-background-size: 50px,cover;
     -o-background-size: 50px,cover;
@@ -65,7 +65,7 @@ ol, ul {
 
 .tagline {
     margin: 0 0 30px -5px;
-    font: 650 italic 66px/1.1 "open-sans", sans-serif;
+    font: 700 italic 60px/1.1 "open-sans", sans-serif;
     text-transform: uppercase;
 }
 
