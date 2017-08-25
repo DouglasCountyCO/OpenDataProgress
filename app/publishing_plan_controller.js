@@ -132,7 +132,7 @@ $(function () {
 
     function getPlanDates(index) {
         index = parseInt(index);
-        var planPeriods = ['07/01/2016', '01/01/2016', '01/01/2015'];
+        var planPeriods = ['01/01/2017', '01/01/2016', '01/01/2015'];
         if (!index) {
             index = 0;
         }
